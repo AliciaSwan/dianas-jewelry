@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Angélika
- * Date: 23/01/2019
- * Time: 17:49
- */
 
 namespace app\models;
 
@@ -26,7 +20,7 @@ class Articles extends ActiveRecord
         return $articles;
     }
      public function getArticleCategory($id){
-        $catArticles = Articles::find()->where(['category-name' => $id])->asArray()->all();
+        $catArticles = Articles::find()->where(['category' => $id])->asArray()->all();
         return $catArticles;
      }
 

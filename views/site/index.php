@@ -2,52 +2,74 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Diana\'s Jewelry';
 ?>
-<div class="site-index">
+<?= \app\widgets\MenuWidget::widget(); ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
+<div id="slider">
+    <ul>
+        <li style="background-image: url(/web/images/0.jpg)">
+            <h3>Make your life better</h3>
+            <h2>Genuine diamonds</h2>
+            <a href="#" class="btn-more">Read more</a>
+        </li>
+        <li class="purple" style="background-image: url(/web/images/01.jpg)">
+            <h3>She will say “yes”</h3>
+            <h2>engagement ring</h2>
+            <a href="#" class="btn-more">Read more</a>
+        </li>
+        <li class="yellow" style="background-image: url(/web/images/02.jpg)">
+            <h3>You deserve to be beauty</h3>
+            <h2>golden bracelets</h2>
+            <a href="#" class="btn-more">Read more</a>
+        </li>
+    </ul>
 </div>
+<!-- / body -->
+<!-- last products -->
+
+
+<div id="body">
+    <div class="container">
+
+        <section class="quick-links">
+            <article style="background-image: url(/web/images/2.jpg)">
+                <a href="#" class="table">
+                    <div class="cell">
+                        <div class="text">
+                            <h4>Lorem ipsum</h4>
+                            <hr>
+                            <h3>Dolor sit amet</h3>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="red" style="background-image: url(/web/images/3.jpg)">
+                <a href="#" class="table">
+                    <div class="cell">
+                        <div class="text">
+                            <h4>consequatur</h4>
+                            <hr>
+                            <h3>voluptatem</h3>
+                            <hr>
+                            <p>Accusantium</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article style="background-image: url(/web/images/4.jpg)">
+                <a href="#" class="table">
+                    <div class="cell">
+                        <div class="text">
+                            <h4>culpa qui officia</h4>
+                            <hr>
+                            <h3>magnam aliquam</h3>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </div>
+    <!-- / container -->
+</div>
+<!-- / body -->

@@ -6,7 +6,7 @@ use yii\helpers\Url;
         <div class="trigger"></div>
         <ul>
             <?php foreach ($data as $id){ ?>
-            <li><a href="<?= Url::to(['category/product', 'id' =>$id['category'] ])?>"><?=$id['category'] ?></a></li>
+                <li><a href="<?=Url::to(['category/product', 'id' =>$id['category'] ])?>"><?=$id['category'] ?></a></li>
             <?php } ?>
         </ul>
     </div>
