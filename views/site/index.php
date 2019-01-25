@@ -3,8 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Diana\'s Jewelry';
-?>
-<?= \app\widgets\MenuWidget::widget(); ?>
+echo \app\widgets\MenuWidget::widget(); ?>
 
 <div id="slider">
     <ul>
@@ -31,6 +30,19 @@ $this->title = 'Diana\'s Jewelry';
 
 <div id="body">
     <div class="container">
+<!--        <div class="last-products">-->
+<!--            <h2>Last added products</h2>-->
+<!--            <section class="products">-->
+<!--                --><?php //foreach ($articles as $article){ ?>
+<!--                    <article>-->
+<!--                        <img src="/web/images/--><?//=$article['img']; ?><!--" alt="--><?//=$article['name'] ?><!--">-->
+<!--                        <h3>--><?//=$article['name'] ?><!--</h3>-->
+<!--                        <h4>$--><?//=$article['price'] ?><!--</h4>-->
+<!--                        <a href="cart.html" class="btn-add">Add to cart</a>-->
+<!--                    </article>-->
+<!--                --><?php //} ?>
+<!--            </section>-->
+<!--        </div>-->
 
         <section class="quick-links">
             <article style="background-image: url(/web/images/2.jpg)">

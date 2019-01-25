@@ -1759,3 +1759,7 @@ h1 {
 		width: 49% !important;
 	}
 }
+.small-img{
+	max-width: 210px;
+	max-height: 210px;
+}

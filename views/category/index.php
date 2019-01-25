@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Url;
 $this->title = 'Diana\'s Jewelry';
 
 echo \app\widgets\MenuWidget::widget();
@@ -32,10 +33,10 @@ echo \app\widgets\MenuWidget::widget();
             <section class="products">
                 <?php foreach ($articles as $article){ ?>
                 <article>
-                    <img src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
+                    <img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
                     <h3><?=$article['name'] ?></h3>
                     <h4>$<?=$article['price'] ?></h4>
-                    <a href="cart.html" class="btn-add">Add to cart</a>
+                    <a href="" data-name="<?=$article['link-name']?>" class="btn-add add-cart">Add to cart</a>
                 </article>
                 <?php } ?>
             </section>

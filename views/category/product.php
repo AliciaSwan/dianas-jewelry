@@ -72,10 +72,10 @@ use yii\helpers\Url;
                 <section class="products">
                     <?php foreach ($catArticles as $article){ ?>
                     <article>
-                        <a href="<?=Url::to(['product/index', 'name'=>$article['link-name']])?>"><img src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>"></a>
-                        <h3><a href="<?=Url::to(['product/index', 'name'=>$article['link-name']])?>"><?=$article['name'] ?></a></h3>
-                        <h4><a href="<?=Url::to(['product/index', 'name'=>$article['link-name']])?>">$<?=$article['price'] ?></a></h4>
-                        <a href="cart.html" class="btn-add">Add to cart</a>
+                        <a href="<?=Url::to(['article/index', 'name'=>$article['link-name']])?>"><img  class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>"></a>
+                        <h3><a href="<?=Url::to(['article/index', 'name'=>$article['link-name']])?>"><?=$article['name'] ?></a></h3>
+                        <h4><a href="<?=Url::to(['article/index', 'name'=>$article['link-name']])?>">$<?=$article['price'] ?></a></h4>
+                        <a href="#"  data-name="<?=$article['link-name']?>" class="btn-add add-cart">Add to cart</a>
                     </article>
                     <?php } ?>
                 </section>

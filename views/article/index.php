@@ -1,8 +1,20 @@
-<?$this->title = 'Diana\'s Jewelry | '.$catArticles[0]['cat_rus'];?>
+<?
+use yii\helpers\Url;
+$this->title = 'Diana\'s Jewelry | '.$catArticles[0]['cat_rus'];?>
+
+<div id="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="<?=Url::to(['category/product', 'id'=> $article['category']] )?>"><?=$article['category']?></a></li>
+            <li><?=$article['name'] ?></li>
+        </ul>
+    </div>
+    <!-- / container -->
+</div>
 <div id="body">
     <div class="container">
         <div id="content" class="full">
-            <?php foreach ($catArticles as $article){ ?>
             <div class="product">
                 <div class="image">
                     <img src="/web/images/<?=$article['img'] ?>" alt="">
@@ -39,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <?php } ?>
+<!--        --><?php //} ?>
         <!-- / content -->
     </div>
     <!-- / container -->
