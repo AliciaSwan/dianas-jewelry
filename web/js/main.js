@@ -55,3 +55,21 @@ $(document).ready(function() {
 	});
 });
 
+$('.add-cart').on('click', function (event) {
+	event.preventDefault();
+	let name = $(this).data('name');
+	console.log(name);
+})
+// 	 $.ajax({
+// 	 	url: '/cart/add',
+// 	 	data: {name: name},
+// 	 	type: 'GET',
+// 	 	success :function (res) {
+// 	 		$('#cart .cart-table').html(res);
+// 	// 		$('.menu-quantity').html('('+ $('.total-quantity').html()+')');
+// 	//		alert('succes');
+// 	 	},
+// 	 	error :function () {
+// 	 		alert('error');
+// 	 	}
+// 	 })

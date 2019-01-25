@@ -46,7 +46,7 @@ $this->title = 'Diana\'s Jewelry | '.$catArticles[0]['cat_rus'];?>
                     <div class="actions">
                         <label>Quantity:</label>
                         <select><option>1</option></select>
-                        <a href="#" data-name="<?=$article['link-name']?>" class="btn-grey add-cart">Add to cart</a>
+                        <a href="<?=Url::to(['cart/add', 'name'=>$article->link_name])?>" data-name="<?=$article['link_name']?>" class="btn-grey add-cart">Add to cart</a>
                     </div>
                 </div>
             </div>

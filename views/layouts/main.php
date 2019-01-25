@@ -30,7 +30,7 @@ AppAsset::register($this);
         <a href="/category/" id="logo" title="Diana’s jewelry"></a>
         <div class="right-links">
             <ul>
-                <li><a href="<?=Url::to(['cart/cart'])?>"><span class="ico-products"></span>3 products, $4 500.00</a></li>
+                <li><a href="<?=Url::to(['cart/add'])?>"><span class="ico-products"></span>3 products, $4 500.00</a></li>
                 <li><a href="#"><span class="ico-account"></span>Account</a></li>
                 <li><a href="#"><span class="ico-signout"></span>Sign out</a></li>
             </ul>
