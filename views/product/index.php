@@ -34,7 +34,7 @@
                     <div class="actions">
                         <label>Quantity:</label>
                         <select><option>1</option></select>
-                        <a href="#" data-name="<?=$article['link-name']?>" class="btn-grey add-cart">Add to cart</a>
+                        <a href="#" data-id="<?=$article['id']?>" class="btn-grey add-cart">Add to cart</a>
                     </div>
                 </div>
             </div>

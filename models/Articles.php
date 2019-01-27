@@ -24,8 +24,8 @@ class Articles extends ActiveRecord
 //        return $lastArticles;
 //    }
 
-    public function getOneArticle($name){
-        return Articles::find()->where(['link_name'=>$name])->one();
+    public function getOneArticle($id){
+        return Articles::find()->where(['id'=>$id])->one();
     }
 
      public function getArticleCategory($id){

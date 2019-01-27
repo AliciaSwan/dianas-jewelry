@@ -36,7 +36,7 @@ echo \app\widgets\MenuWidget::widget();
                     <img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
                     <h3><?=$article['name'] ?></h3>
                     <h4>$<?=$article['price'] ?></h4>
-                    <a href="" data-name="<?=$article['link-name']?>" class="btn-add add-cart">Add to cart</a>
+                    <a href="" data-id="<?=$article['id']?>" class="btn-add add-cart">Add to cart</a>
                 </article>
                 <?php } ?>
             </section>

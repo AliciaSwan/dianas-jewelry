@@ -30,7 +30,7 @@ AppAsset::register($this);
         <a href="/category/" id="logo" title="Diana’s jewelry"></a>
         <div class="right-links">
             <ul>
-                <li><a href="<?=Url::to(['cart/add'])?>"><span class="ico-products"></span>3 products, $4 500.00</a></li>
+                <li><a href="<?=Url::to(['cart/open'])?>"><span class="ico-products"></span><span class="menu-quantity"><?=$_SESSION['cart.totalQuantity'] ? $_SESSION['cart.totalQuantity'] : 0 ?></span><span> products<!--, $--><?//=$_SESSION['cart.totalSum'] ? $_SESSION['cart.totalSum'] : 0 ?> </span></a></li>
                 <li><a href="#"><span class="ico-account"></span>Account</a></li>
                 <li><a href="#"><span class="ico-signout"></span>Sign out</a></li>
             </ul>
@@ -46,6 +46,7 @@ AppAsset::register($this);
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
+
 
 <footer id="footer">
     <div class="container">
