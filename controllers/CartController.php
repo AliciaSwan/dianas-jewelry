@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Cart;
 use app\models\Articles;
+use app\models\Order;
 use yii\web\Controller;
 use Yii;
 
@@ -20,13 +21,6 @@ class CartController extends Controller
         $article = new Articles();
         $article = $article->getOneArticle($id);
 
-//        $id = Yii::$app->request->get('id');
-//        $article =  Articles::findOne($id);
-//        if(empty($article)) return false;
-//        $session = Yii::$app->session;
-//        $session->open();
-
-
 
         //$session->remove('cart');
         $cart = new Cart();
@@ -39,8 +33,15 @@ class CartController extends Controller
         $session->open();
         $cart = new Cart();
         $cart->recalcCart($id);
-        return true;
-       // return $this->render('add', compact( 'session'));
+        //return true;
+        $this->layout = 'empty-layout';
+        return $this->render('add', compact( 'session'));
+    }
+    public function actionOrder(){
+        $session = Yii::$app->session;
+        $session->open();
+        $order = new Order();
+        return $this->render('order', compact( 'session', 'order'));
     }
 
 }

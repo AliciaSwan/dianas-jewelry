@@ -84,15 +84,28 @@ $('.cart-table').on('click', '.delete', function () {
 		url: '/cart/delete',
 		data: {id: id},
 		type: 'GET',
-		success :function () {
-		//	$('.menu-quantity').html(+$('.menu-quantity').html()-1);
-		//	$('.menu-quantity').html('('+ $('.total-quantity').html()+')');
-		//	$('#cart .cart-table').html(res);
+		success :function (res) {
+			$('#body').html(res);
 				if($('.total-quantity').html()>0){
 					$('.menu-quantity').html($('.total-quantity').html());
 				}else{
 					$('.menu-quantity').html('0');
 				}
+		},
+		error :function () {
+			alert('error');
+		}
+	})
+})
+
+$('.cart-table').on('click', '.btn-order', function () {
+	$.ajax({
+		url: '/cart/order',
+		type: 'GET',
+		success :function (res) {
+			$('#order .modal-content').html(res);
+			//$('#cart').modal('hide');
+			//$('#order').modal('show');
 		},
 		error :function () {
 			alert('error');

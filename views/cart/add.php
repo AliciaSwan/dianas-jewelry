@@ -2,7 +2,7 @@
 //echo "<pre>";
 //var_dump($session['cart'] );
 //echo "<pre>";
-
+use yii\widgets\ActiveForm;
 if($session['cart']){?>
 <div id="breadcrumbs">
     <div class="container">
@@ -44,14 +44,23 @@ if($session['cart']){?>
                     <?php } ?>
                 </table>
             </div>
-
+<!--            <div class="order-form">-->
+<!--            <h2>place your order</h2>-->
+<!--                --><?php //$form = ActiveForm::begin(); ?>
+<!---->
+<!--                --><?//= $form->field($order, 'name'); ?>
+<!--                --><?//= $form->field($order, 'phone'); ?>
+<!--                --><?//= $form->field($order, 'email'); ?>
+<!--                --><?//= $form->field($order, 'address'); ?>
+<!--                --><?php //ActiveForm::end(); ?>
+<!--            </div>-->
             <div class="total-count">
                 <br/>
-                <!--               <h4>Subtotal: $4 500.00</h4>-->
+                <!-- <h4>Subtotal: $4 500.00</h4>-->
                 <h5>Total quantity: <span  class="total-quantity"><?=$session['cart.totalQuantity'] ?></span></h5>
                 <p>+shippment: $30.00</p>
                 <h3>Total to pay: <strong>$<?=$session['cart.totalSum']+30 ?></strong></h3>
-                <a href="#" class="btn-grey">Finalize and pay</a>
+                <a href="#" class="btn-grey btn-order">Finalize and pay</a>
             </div>
 
         </div>
