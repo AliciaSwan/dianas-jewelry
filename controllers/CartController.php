@@ -30,9 +30,6 @@ class CartController extends Controller
                     ->setTo( $order->email)
                     ->setSubject('Ваш заказ принят')
                     ->send();
-//                $session->remove('cart');
-//                $session->remove('cart.totalQuantity');
-//                $session->remove('cart.totalSum');
                 return $this->render('success', compact( 'session','currentID', 'order'));
             }
         }
@@ -72,9 +69,26 @@ class CartController extends Controller
         $session->open();
         $cart = new Cart();
         $cart->recalcCart($id);
-        //return true;
+        $order = new Order();
+        if(!$session['cart.totalSum']){
+            return Yii::$app->response->redirect(Url::to('/'));
+        }
+        if($order ->load(Yii::$app->request->post())){
+            $order->date = date('Y-m-d H:m:s');
+            $order->sum = $session['cart.totalSum'];
+            if($order->save()){
+                $currentID = $order -> id;
+                $this->saveOrderInfo($session['cart'], $currentID);
+                Yii::$app->mailer->compose('order-mail', ['session'=>$session, 'order'=>$order])
+                    ->setFrom(['alicia-swan@mail.ru' => 'Test Test'])
+                    ->setTo( $order->email)
+                    ->setSubject('Ваш заказ принят')
+                    ->send();
+                return $this->render('success', compact( 'session','currentID', 'order'));
+            }
+        }
         $this->layout = 'empty-layout';
-        return $this->render('add', compact( 'session'));
+        return $this->render('add', compact( 'session','order'));
     }
 
 }

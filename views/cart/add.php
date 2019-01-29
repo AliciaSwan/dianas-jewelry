@@ -5,6 +5,7 @@
 $this->title = 'Diana\'s Jewelry | Cart';
 use yii\widgets\ActiveForm;
 ?>
+<?php if($session['cart']){?>
 <div id="breadcrumbs">
     <div class="container">
         <ul>
@@ -15,7 +16,7 @@ use yii\widgets\ActiveForm;
     <!-- / container -->
 </div>
 <!-- / body -->
-<?php if($session['cart']){?>
+
 <div id="body">
     <div class="container" id="cart">
         <div id="content" class="full">
