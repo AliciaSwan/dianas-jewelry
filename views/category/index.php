@@ -33,9 +33,9 @@ echo \app\widgets\MenuWidget::widget();
             <section class="products">
                 <?php foreach ($lastArticles as $article){ ?>
                 <article>
-                    <img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
-                    <h3><?=$article['name'] ?></h3>
-                    <h4>$<?=$article['price'] ?></h4>
+                    <a href="<?= Url::to(['article/index', 'id'=>$article['id']])?>" ><img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>"></a>
+                        <h3><a href="<?= Url::to(['article/index', 'id'=>$article['id']])?>" ><?=$article['name'] ?></a></h3>
+                        <h4><a href="<?= Url::to(['article/index', 'id'=>$article['id']])?>" >$<?=$article['price'] ?></a></h4>
                     <a href="" data-id="<?=$article['id']?>" class="btn-add add-cart">Add to cart</a>
                 </article>
                 <?php } ?>
