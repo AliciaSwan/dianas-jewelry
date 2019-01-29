@@ -31,7 +31,7 @@ echo \app\widgets\MenuWidget::widget();
         <div class="last-products">
             <h2>Last added products</h2>
             <section class="products">
-                <?php foreach ($articles as $article){ ?>
+                <?php foreach ($lastArticles as $article){ ?>
                 <article>
                     <img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
                     <h3><?=$article['name'] ?></h3>

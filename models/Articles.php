@@ -19,10 +19,10 @@ class Articles extends ActiveRecord
         }
         return $articles;
     }
-//    public function getLastArticles(){
-//        $lastArticles = Articles::find()->orderBy(['date' => SORT_DESC])->limit(10)->asArray()->all();
-//        return $lastArticles;
-//    }
+    public function getLastArticles(){
+        $lastArticles = Articles::find()->orderBy(['date' => SORT_DESC])->limit(10)->asArray()->all();
+        return $lastArticles;
+    }
 
     public function getOneArticle($id){
         return Articles::find()->where(['id'=>$id])->one();

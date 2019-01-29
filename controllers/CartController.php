@@ -70,9 +70,6 @@ class CartController extends Controller
         $cart = new Cart();
         $cart->recalcCart($id);
         $order = new Order();
-        if(!$session['cart.totalSum']){
-            return Yii::$app->response->redirect(Url::to('/'));
-        }
         if($order ->load(Yii::$app->request->post())){
             $order->date = date('Y-m-d H:m:s');
             $order->sum = $session['cart.totalSum'];

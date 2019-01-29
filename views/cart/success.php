@@ -1,4 +1,6 @@
-<?php $this->title = 'Diana\'s Jewelry | Your order №'.$currentID ;?>
+<?php
+
+$this->title = 'Diana\'s Jewelry | Your order №'.$currentID ;?>
 <div id="body">
     <div class="container" class="empty-cart">
         <div id="content" class="full">

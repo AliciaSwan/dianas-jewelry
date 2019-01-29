@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Articles;
 
 class SiteController extends Controller
 {
@@ -61,7 +62,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $lastArticles = new Articles();
+        $lastArticles = $lastArticles->getLastArticles();
+        return $this->render('index', compact('lastArticles'));
     }
 
     /**

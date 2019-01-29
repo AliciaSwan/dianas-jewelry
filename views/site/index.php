@@ -30,19 +30,19 @@ echo \app\widgets\MenuWidget::widget(); ?>
 
 <div id="body">
     <div class="container">
-<!--        <div class="last-products">-->
-<!--            <h2>Last added products</h2>-->
-<!--            <section class="products">-->
-<!--                --><?php //foreach ($articles as $article){ ?>
-<!--                    <article>-->
-<!--                        <img src="/web/images/--><?//=$article['img']; ?><!--" alt="--><?//=$article['name'] ?><!--">-->
-<!--                        <h3>--><?//=$article['name'] ?><!--</h3>-->
-<!--                        <h4>$--><?//=$article['price'] ?><!--</h4>-->
-<!--                        <a href="cart.html" class="btn-add">Add to cart</a>-->
-<!--                    </article>-->
-<!--                --><?php //} ?>
-<!--            </section>-->
-<!--        </div>-->
+        <div class="last-products">
+            <h2>Last added products</h2>
+            <section class="products">
+                <?php foreach ($lastArticles as $article){ ?>
+                    <article>
+                        <img class="small-img" src="/web/images/<?=$article['img']; ?>" alt="<?=$article['name'] ?>">
+                        <h3><?=$article['name'] ?></h3>
+                        <h4>$<?=$article['price'] ?></h4>
+                        <a href="" data-id="<?=$article['id']?>" class="btn-add add-cart">Add to cart</a>
+                    </article>
+                <?php } ?>
+            </section>
+        </div>
 
         <section class="quick-links">
             <article style="background-image: url(/web/images/2.jpg)">

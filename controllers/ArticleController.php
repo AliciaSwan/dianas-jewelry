@@ -14,4 +14,5 @@ class ArticleController extends Controller
         return $this->render('index', compact('article'));
     }
 
+
 }

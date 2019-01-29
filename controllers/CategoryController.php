@@ -16,7 +16,9 @@ class CategoryController extends Controller
     public function actionIndex(){
         $articles = new Articles();
         $articles = $articles->getAllArticles();
-        return $this->render('index', compact('articles'));
+        $lastArticles = new Articles();
+        $lastArticles = $lastArticles->getLastArticles();
+        return $this->render('index', compact('articles', 'lastArticles'));
     }
 
     public function  actionProduct($id){

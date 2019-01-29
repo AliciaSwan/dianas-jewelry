@@ -76,7 +76,8 @@ $('.add-cart').on('click', function (event) {
 	 })
 })
  //удаляем товар из корзины по нажатию на крестик
-$('#body').on('click', '.delete', function () {
+$('#body').on('click', '.delete', function (event) {
+	event.preventDefault();
 	let id = $(this). data('id');
 	//console.log(id);
 	$.ajax({
