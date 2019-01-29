@@ -1,4 +1,4 @@
-<?$this->title = 'Diana\'s Jewelry | '.$catArticles[0]['cat_rus'];?>
+<?$this->title = 'Diana\'s Jewelry | '.$article[0]['name'];?>
 <div id="body">
     <div class="container">
         <div id="content" class="full">

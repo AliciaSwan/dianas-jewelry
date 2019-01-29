@@ -2,8 +2,9 @@
 //echo "<pre>";
 //var_dump($session['cart'] );
 //echo "<pre>";
+$this->title = 'Diana\'s Jewelry | Cart';
 use yii\widgets\ActiveForm;
-if($session['cart']){?>
+?>
 <div id="breadcrumbs">
     <div class="container">
         <ul>
@@ -14,7 +15,7 @@ if($session['cart']){?>
     <!-- / container -->
 </div>
 <!-- / body -->
-
+<?php if($session['cart']){?>
 <div id="body">
     <div class="container" id="cart">
         <div id="content" class="full">
@@ -44,23 +45,26 @@ if($session['cart']){?>
                     <?php } ?>
                 </table>
             </div>
-<!--            <div class="order-form">-->
-<!--            <h2>place your order</h2>-->
-<!--                --><?php //$form = ActiveForm::begin(); ?>
-<!---->
-<!--                --><?//= $form->field($order, 'name'); ?>
-<!--                --><?//= $form->field($order, 'phone'); ?>
-<!--                --><?//= $form->field($order, 'email'); ?>
-<!--                --><?//= $form->field($order, 'address'); ?>
-<!--                --><?php //ActiveForm::end(); ?>
-<!--            </div>-->
+
             <div class="total-count">
+                <div class="order-form">
+                    <h3>place your order</h3>
+                    <?php $form = ActiveForm::begin(); ?>
+
+                    <?= $form->field($order, 'name'); ?>
+                    <?= $form->field($order, 'phone'); ?>
+                    <?= $form->field($order, 'email'); ?>
+                    <?= $form->field($order, 'address'); ?>
+
+                </div>
                 <br/>
                 <!-- <h4>Subtotal: $4 500.00</h4>-->
+
                 <h5>Total quantity: <span  class="total-quantity"><?=$session['cart.totalQuantity'] ?></span></h5>
                 <p>+shippment: $30.00</p>
                 <h3>Total to pay: <strong>$<?=$session['cart.totalSum']+30 ?></strong></h3>
-                <a href="#" class="btn-grey btn-order">Finalize and pay</a>
+                <button class="btn-grey btn-order">Finalize and pay</button>
+                <?php ActiveForm::end(); ?>
             </div>
 
         </div>
@@ -70,10 +74,10 @@ if($session['cart']){?>
 </div>
 <!-- / body -->
 <?php } else  {  ?>
-    <div class="container">
-        <div class="cart">
-            <h3 style="padding-bottom: 20px;">В вашей корзине ничего нет :( </h3>
-            <button type=" button" class="btn btn-secondary btn-close">Начать покупки</button>
+    <div class="container empty-cart">
+        <div id="content" class="full">
+            <h5 style="padding-bottom: 20px;">There is nothing in your cart </h5>
+            <a href="/" type="button" class="btn-grey btn-order">Start shopping</a>
         </div>
     </div>
 <?php } ?>

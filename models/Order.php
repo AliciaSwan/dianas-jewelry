@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Angélika
+ * Date: 28/01/2019
+ * Time: 14:13
+ */
 
 namespace app\models;
 use yii\db\ActiveRecord;
@@ -11,13 +17,16 @@ class Order extends ActiveRecord
     {
         return 'order';
     }
-
+    //связывает табл order  и order_good по id и order_id
+    public function getOrderArticles(){
+        return $this->hasMany( OrderArticles::class, ['order_id'=> 'id']);
+    }
     public function rules()
     {
         return [
-            [['name', 'email', 'adresse', 'phone'], 'required'],
+            [['name', 'email', 'address', 'phone'], 'required'],
             [['email'], 'email'],
-            [['name', 'email', 'adresse', 'phone'], 'string', 'max' => 45],
+            [['name', 'email', 'address', 'phone'], 'string', 'max' => 45],
         ];
     }
 
@@ -27,7 +36,7 @@ class Order extends ActiveRecord
         return [
             'name' => 'Name',
             'email' => 'Email',
-            'adresse' => 'Adresse',
+            'address' => 'Address',
             'phone' => 'Phone',
         ];
     }

@@ -1,6 +1,6 @@
 <?
 use yii\helpers\Url;
-$this->title = 'Diana\'s Jewelry | '.$catArticles[0]['cat_rus'];?>
+$this->title = 'Diana\'s Jewelry | '.$article['name'];?>
 
 <div id="breadcrumbs">
     <div class="container">

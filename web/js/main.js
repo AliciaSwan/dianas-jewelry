@@ -58,8 +58,7 @@ $(document).ready(function() {
 $('.add-cart').on('click', function (event) {
 	event.preventDefault();
 	let id = $(this).data('id');
-	console.log(id);
-
+	//console.log(id);
 	 $.ajax({
 	 	url: '/cart/add',
 	 	data: {id: id},
@@ -98,17 +97,3 @@ $('.cart-table').on('click', '.delete', function () {
 	})
 })
 
-$('.cart-table').on('click', '.btn-order', function () {
-	$.ajax({
-		url: '/cart/order',
-		type: 'GET',
-		success :function (res) {
-			$('#order .modal-content').html(res);
-			//$('#cart').modal('hide');
-			//$('#order').modal('show');
-		},
-		error :function () {
-			alert('error');
-		}
-	})
-})

@@ -58,6 +58,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	width: 100%;
+}
+.table{ width: 100%;}
+.color-black{color: #000000;}
+h3.title{
+	font-size: 25px;
+	text-align: center;
 }
 
 a[href], label[for], select, 
@@ -161,7 +168,20 @@ input, textarea, select, button {
 	outline: none;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
+input{
+	height: 30px;
+	width: 550px;
+	margin: 5px;
+	border: 0;
+	border-bottom: 1px solid grey;
+}
+label{
+	width: 400px;
+}
+.help-block{
+	color: red;
+	font-size: 12px;
+}
 a{
 	text-decoration: none;
 	color: #666668;
@@ -170,7 +190,9 @@ a{
 a:hover {
 	text-decoration: underline;
 }
-
+.empty-cart{
+	padding: 220px 0;
+}
 
 /* Container
 ------------------------------------------------------------------------------*/
@@ -677,7 +699,7 @@ h1 {
 
 .total-count {
 	display: block;
-	max-width: 568px;
+	max-width: 1168px;
 	border: 1px solid #d3d3d3;
 	margin: 48px auto 30px;
 	font-family: "Roboto";
@@ -704,6 +726,7 @@ h1 {
 	height: 53px;
 	font-family: "Roboto";
 	background-color: #373737;
+	border: 0;
 }
 
 .btn-grey:hover{
@@ -785,7 +808,7 @@ h1 {
 	border-right: 1px solid #515151;
 }
 
-.cart-table .delete-btn {
+.cart-table .delete {
 	width: 44px;
 	padding: 8px;
 }
@@ -1768,4 +1791,4 @@ h1 {
 }
 .menu-quantity{
 	width: 180px;
-}
+}                 

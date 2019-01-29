@@ -49,7 +49,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'category/<id>' => 'category/product',
-                //'article/<name>' => 'article/index',
+                'article/<id>' => 'article/index',
+                'cart/'=>'cart/add',
             ],
         ],
     ],
